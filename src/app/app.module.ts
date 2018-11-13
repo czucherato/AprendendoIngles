@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './Componentes/app.component';
-import { TopoComponent } from './Componentes/Topo/topo.component';
+import { AppComponent } from './componentes/app.component';
+import { TopoComponent } from './componentes/topo/topo.component';
+import { PainelComponent } from './componentes/painel/painel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopoComponent
+    TopoComponent,
+    PainelComponent
   ],
   imports: [
     BrowserModule
