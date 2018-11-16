@@ -2,26 +2,27 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-sm-6">
-        <app-progresso></app-progresso>
+        <app-progresso [Progresso]="Progresso"></app-progresso>
       </div>
       <div class="col-sm-6">
         <div class="d-flex justify-content-end">
-            <app-tentativas></app-tentativas>
+            <app-tentativas [Tentativas]="Tentativas"></app-tentativas>
         </div>     
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <h6>Traduza a frase:</h6>
+        <h6>{{ Instrucao }}</h6>
+        <p>{{ RodadaFrase.fraseEng }}</p>
         <div class="form-group">
-          <textarea class="form-control" rows="3"></textarea>
+          <textarea class="form-control" rows="3" (input)="atualizarResposta($event)" [value]="Resposta"></textarea>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col">
         <div class="d-flex justify-content-end">
-            <button class="btn btn-primary" type="button">Verificar</button>
+            <button class="btn btn-primary" type="button" (click)="verificarResposta()">Verificar</button>
         </div>
       </div>
     </div>
